@@ -41,7 +41,11 @@ class ModelFood(models.Model):
     
     image = models.ImageField(upload_to='user/')
     description = models.TextField(max_length=150)
+    
+    date_create = models.DateTimeField(auto_now_add=True)
+    data_atualization = models.DateTimeField(auto_now=True)
 
+  
     def __str__(self):
-        return self.name
+        return f'{self.category_food}'
         

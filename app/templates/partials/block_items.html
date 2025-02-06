@@ -1,0 +1,34 @@
+
+<div class="box">
+  <div class="image">
+    <img class="img" src="{{foods.image.url}}" alt="" />
+  </div>
+  <div class="content-box">
+    <div class="content-title">
+      <h1 class="title">{{foods.name}}</h1>
+    </div>
+
+    <div class="content-utils">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+        minus, at repellat fugiat sunt porro ipsa numquam consectetur
+        soluta quia, reiciendis nisi ullam impedit! Architecto.
+      </p>
+    </div>
+    <div class="author">
+      <a href="/">{{foods.author.name}}</a>
+    </div>
+    <div class="tags">
+      <sub>Lorem ipsum dolor sit amet consectetur.</sub>
+    </div>
+    <div class="content-final">
+      <div class="datetime">{{foods.date_create|date:"d/m/Y"}}</div>
+
+      <div class="box-content-links">
+        <a href="{% url 'app:category-food' foods.category_food.category %}">{{foods.category_food.category}}</a>
+        <a href="/">{{foods.category_food.subcat}}</a>
+        <a href="{% url 'app:preview' foods.slug foods.id %}">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
+</div>
